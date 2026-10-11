@@ -1,0 +1,16 @@
+<html>
+    <div id="box" style="width: 150px; border: black;background: lightblue;height: 150px;">
+        hover me
+    </div>
+
+    <script>
+        const box = document.getElementById('box');
+        box.addEventListener('mouseover',function(){
+            box.style.backgroundColor = "yellow";
+        })
+        box.addEventListener('mouseout',function(){
+            box.style.backgroundColor = "red";
+
+        })
+    </script>
+</html>

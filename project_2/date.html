@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Will You Date Me?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #e74c3c;
+            color: white;
+            position: absolute;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will you go on a date with me? 💖</h1>
+
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+
+    <script>
+        // Select the buttons
+        const noBtn = document.getElementById("noBtn");
+        const yesBtn = document.getElementById("yesBtn");
+
+        // Make the "No" button run away when the mouse hovers over it
+        noBtn.addEventListener("mouseover", function() {
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 150));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 150));
+
+            noBtn.style.left = randomX + "px";
+            noBtn.style.top = randomY + "px";
+        });
+
+        // When "Yes" is clicked, show a happy message
+        yesBtn.addEventListener("click", function() {
+            alert("Yay! I'll pick you up at 7:00 PM! 😄");
+        });
+    </script>
+
+</body>
+</html>
